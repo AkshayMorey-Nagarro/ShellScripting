@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# First arg is the password
 password=$1
 shift
 while [[ "$#" -gt 0 ]]
@@ -12,6 +13,7 @@ while [[ "$#" -gt 0 ]]
     shift
 done
 
+# if empty password provided, use a random number to hash
 if [[ $password == "" ]]; then
     password=$RANDOM
 fi
